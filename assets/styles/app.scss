@@ -1,0 +1,124 @@
+@import './_variables.scss';
+@import './_navbar.scss';
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bakbak+One&display=swap');
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #021015;
+    color: #8BAAB6;
+    font-family: $primary-font;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.fullname {
+    font-size: 24px;
+    line-height: 1.4rem;
+    font-weight: 800;
+    font-stretch: ultra-expanded;
+}
+
+.cv-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+}
+.cv {
+    position: absolute;
+    bottom: -18px;
+}
+
+.project-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project__infos {
+    position: relative;
+}
+
+.project__title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.project__image {
+    width: 100%;
+    margin: 10px 0 50px 0;
+    opacity: 0.7;
+}
+
+.project__link {
+    position: absolute;
+    top: 50%;
+    right: 42%;
+    padding: 6px 20px;
+}
+
+.social-link {
+    color: #8BAAB6;
+    text-decoration: none;
+    &:hover {
+        color: lighten(#8BAAB6, 10);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 64px;
+    }
+
+    .presentation {
+        margin-top: 100px;
+        margin-left: 50%;
+    }
+
+    .cv-container {
+        display: block;
+    }
+    .cv {
+        margin-left: 70%;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        bottom: -23px;
+    }
+
+    .project-1 {
+        flex-direction: row;
+    }
+
+    .project-2 {
+        flex-direction: row-reverse;
+    }
+
+    .project__infos {
+        width: 65%;
+    }
+
+    .project__skills {
+        margin: auto;
+    }
+
+    .project__link {
+        text-transform: uppercase;
+    }
+}

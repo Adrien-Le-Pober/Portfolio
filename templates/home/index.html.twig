@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main class="mt-5" id="top">
+    <section class="container">
+        <header class="d-flex justify-content-between">
+            <div class="d-flex flex-column flex-sm-row justify-content-center align-items-sm-center text-uppercase fullname">
+                <span class="text-secondary">Adrien</span>
+                <span class="text-white">Le Pober</span>
+            </div>
+            {% include 'layouts/_navbar.html.twig' %}
+        </header>
+        <div class="presentation" id="presentation">
+            <h1 class="my-5 text-white">Présentation</h1>
+            <p>
+                Développeur web depuis maintenant plus de 2 ans, je pense aujourd'hui pouvoir prétendre être passionné, tant je prends de plaisir à résoudre les challenges qui me sont proposés :)<br>
+                Mon unique ambition est de concevoir des sites web de qualité, qui donneront entière satisfaction.<br>
+            </p>
+            <p>
+                Je suis également un passionné de sport, plus particulièrement de football et d'arts martiaux.
+            </p>
+        </div>
+        <div class="cv-container">
+            <a href={{ asset('build/images/CV-adrien-le-pober.pdf') }} class="btn btn-secondary rounded-pill text-white cv">Télécharger mon CV</a>
+        </div>
+    </section>
+
+    <section class="bg-primary container-fluid p-0" id="projets">
+        <div class="container">
+            <h1 class="pt-5 pb-3 py-xl-5 mb-0 text-white">Projets</h1>
+            {% include 'projects/_projects.html.twig' %}
+        </div>
+    </section>
+
+    <section class="bg-primary container-fluid p-0" id="contact">
+        <hr class="w-75 text-secondary m-auto bg-primary">
+        <div class="container">
+            <h1 class="py-5 mb-0 text-white">Contact</h1>
+            <span class="d-flex align-items-center mb-2 fs-2">
+                <i class="fa-solid fa-envelope me-3"></i>
+                <p class="m-0">adrien.le.pober@gmail.com</p>
+            </span>
+            <span class="d-flex align-items-center mb-3 fs-2">
+                <i class="fa-solid fa-phone me-3"></i>
+                <p class="m-0">07.62.72.00.39</p>
+            </span>
+            <a href="https://github.com/Zenithao" class="social-link" target="__blank">
+                <i class="fa-brands fa-github pe-2 fs-2"></i>
+            </a>
+            <a href="https://linkedin.com/in/adrien-le-pober/" class="social-link" target="__blank">
+                <i class="fa-brands fa-linkedin fs-2 ps-2"></i>
+            </a>
+            <div class="d-flex justify-content-end pb-5">
+                <a href="#top">
+                    <i class="fa-solid fa-circle-arrow-up text-secondary fs-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
