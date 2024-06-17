@@ -53,6 +53,7 @@ h1 {
 }
 
 .project__infos {
+    width: 100%;
     position: relative;
 }
 
@@ -65,12 +66,14 @@ h1 {
     width: 100%;
     margin: 10px 0 50px 0;
     opacity: 0.7;
+    aspect-ratio: 16/9;
 }
 
 .project__link {
     position: absolute;
     top: 50%;
-    right: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 6px 20px;
 }
 
