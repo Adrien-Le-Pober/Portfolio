@@ -39,7 +39,7 @@ let observer = new IntersectionObserver((entries) => {
         el.animate(bounceRight, bounceTiming);
       }
 
-      if (['project-2 py-5', 'project-4 py-5'].includes(el.className)) {
+      if (['project-2 py-5', 'project-4 py-5', 'project-6 py-5'].includes(el.className)) {
         el.animate(bounceLeft, bounceTiming);
       }
 
@@ -54,7 +54,8 @@ let observer = new IntersectionObserver((entries) => {
   '.project-2',
   '.project-3',
   '.project-4',
-  '.project-5'
+  '.project-5',
+  '.project-6',
 ].forEach(selector => {
   const el = document.querySelector(selector);
   if (el) observer.observe(el);
